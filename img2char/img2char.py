@@ -61,6 +61,6 @@ if __name__=='__main__':
         with open(OUTPUT,'w') as f:
             f.write(txt)
     else:
-        with open('output_test.txt','w') as f:
+        with open('outpu.txt','w') as f:
             f.write(txt)
             
