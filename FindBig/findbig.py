@@ -23,5 +23,5 @@ def get_big_file(path,filesize):
                 print(target_file,size)
             
 if __name__=='__main__':
-    get_big_file('D:\\',500*1024*1024)
+    get_big_file('C:\\',500*1024*1024)
     
