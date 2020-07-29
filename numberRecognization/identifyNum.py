@@ -29,7 +29,7 @@ if __name__=="__main__":
     train_images=numrec.load_train_images()
     train_labels=numrec.load_train_labels()
     test_images=numrec.load_test_images()
-    test_labels=numrec.load_train_labels()
+    test_labels=numrec.load_test_labels()
     #读入训练集和测试集数据改变为向量
     v_train_images=img2vector(train_images)
     v_test_images=img2vector(test_images)
@@ -38,4 +38,9 @@ if __name__=="__main__":
     classifier_knn=knn.fit(v_train_images,train_labels)
     print('分类器训练完成')
     test_predict=knn.predict(v_test_images)
-    print(test_predict)
+    summ=0
+    for i in range(10000):
+        if (test_predict[i]==test_labels[i]):
+            summ+=1
+    accuracy=summ*1.0/10000
+    print(accuracy)
